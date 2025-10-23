@@ -8,3 +8,11 @@
 
 ## Startup Client
 - [x] Install vite
+- [x] Setup vite
+
+## Setup REST API
+- [x] Initialize project Add gitignore
+- [ ] Install express and setup
+
+## Bonus
+- [ ] Build
