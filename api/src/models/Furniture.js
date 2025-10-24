@@ -27,7 +27,7 @@ const furnitureSchema = new Schema({
         required: [true, 'Price is required!'],
         min: [0, 'Price should be positive number!'],
     },
-    imageUrl: {
+    img: {
         type: String,
         required: [true, 'Image is required!']
     },
@@ -38,6 +38,6 @@ const furnitureSchema = new Schema({
 
 });
 
-const furniture = model('Furniture', furnitureSchema);
+const Furniture = model('Furniture', furnitureSchema);
 
-export default furniture;
+export default Furniture;
