@@ -8,7 +8,7 @@ userController.post('/register', async (req, res) => {
 
     const result = await userService.register(email,password);
 
-    res.status(201).end();
+    res.status(201).json(result);
 });
 
 userController.post('/login', async (req, res) => {
@@ -17,9 +17,17 @@ userController.post('/login', async (req, res) => {
     try {
         const result = await userService.login(email, password);
         res.status(201).json(result);
+
     } catch (err) {
         res.status(401).json({ message: err.message });
     }
 });
+
+userController.get('/logout', (req, res) => {
+
+    // todo: Invalidate token
+
+    res.status(204).json({ok: true});
+})
 
 export default userController;

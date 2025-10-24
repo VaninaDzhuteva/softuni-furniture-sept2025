@@ -27,8 +27,11 @@
 - [x] Hash password on register
 - [x] Add login endpoint
 - [x] Verify login credentials
-- [ ] Generate and return token `npm i jsonwebtoken`
+- [x] Generate and return token `npm i jsonwebtoken`
+- [x] Auto login after registration
+- [x] Logout
+- [ ] Add auth middleware
 
 ## Bonus
 - [ ] Build
-- [ ] Use env `npm i dotenv`
+- [x] Use env `npm i dotenv`
