@@ -43,7 +43,10 @@
 - [x] Edit furniture
 - [x] Delete furniture
 - [ ] Check if owner
-- [ ] Filter furniture by userId
+- [x] Filter furniture by userId
+
+## Error handling
+- [x] Create error util for message
 
 ## Bonus
 - [ ] Build

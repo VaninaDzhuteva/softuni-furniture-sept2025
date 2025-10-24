@@ -2,6 +2,7 @@ import querystring from 'querystring';
 import { Router } from "express";
 
 import furnitureService from "../services/furnitureService.js";
+import { getErrorMessage } from '../utils/errorUtils.js';
 
 const furnitureController = Router();
 
@@ -15,7 +16,7 @@ furnitureController.get('/', async (req, res) => {
     }
 
     const furnitures = await furnitureService.getAll(filter);
-    
+
     res.json(furnitures ?? []);
 });
 
@@ -30,13 +31,19 @@ furnitureController.get('/:furnitureId', async (req, res) => {
 furnitureController.post('/', async (req, res) => {
     const furnitureData = req.body;
     const ownerId = req.user.id;
-    
-    const furniture = await furnitureService.create(furnitureData, ownerId);
 
-    res.status(201).json(furniture);
+    try {
+        const furniture = await furnitureService.create(furnitureData, ownerId);
+
+        res.status(201).json(furniture);
+    } catch (err) {
+        res.status(400).json({ message: getErrorMessage(err) });
+    }
+
+
 });
 
-furnitureController.put('/:furnitureId', async(req, res) => {
+furnitureController.put('/:furnitureId', async (req, res) => {
     const furnitureId = req.params.furnitureId;
     const furnitureData = req.body;
 
@@ -45,7 +52,7 @@ furnitureController.put('/:furnitureId', async(req, res) => {
 
         res.json(furniture);
     } catch (err) {
-        
+
     }
 });
 
@@ -57,7 +64,7 @@ furnitureController.delete('/:furnitureId', async (req, res) => {
 
         res.json(furniture);
     } catch (err) {
-        
+
     }
 });
 
