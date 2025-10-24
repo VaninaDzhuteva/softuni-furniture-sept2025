@@ -33,9 +33,12 @@
 - [x] Add auth middleware
 
 ## Furniture Endpoints
-- [ ] Add furniture model
-- [ ] Add furniture service
-- [ ] Create furniture endpoint
+- [x] Add furniture model
+- [x] Add furniture service
+- [x] Create furniture endpoint
+- [x] Get all furnitures
+- [x] Select only needed info for catalog
+- [x] Create details endpoint
 
 ## Bonus
 - [ ] Build

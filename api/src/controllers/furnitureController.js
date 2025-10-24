@@ -6,6 +6,7 @@ const furnitureController = Router();
 
 furnitureController.get('/', async (req, res) => {
     const furnitures = await furnitureService.getAll();
+    
     res.json(furnitures ?? []);
 });
 
