@@ -12,7 +12,9 @@
 
 ## Setup REST API
 - [x] Initialize project Add gitignore
-- [ ] Install express and setup
+- [x] Install express and setup
+- [x] Add cors
+- [x] Add furniture controller
 
 ## Bonus
 - [ ] Build
