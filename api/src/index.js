@@ -1,16 +1,31 @@
 import express from 'express';
 import cors from 'cors';
+import mongoose from 'mongoose';
+
 import routes from './router.js';
 
 const app = express();
 
+// Setup mongoose
+try {
+    await mongoose.connect('mongodb://localhost:27017', {
+        dbName: 'furniture-sept-2025'
+    });
+
+    console.log('Successfully connected to db!');
+    
+} catch (err) {
+    console.log('Cannot connect to db!');
+    console.log(err);
+}
+
 // Add cors
 app.use(cors());
+
+// Add json parser
+app.use(express.json());
+
 // Add routes
 app.use(routes);
-
-app.get('/', (req, res) => {
-
-});
 
 app.listen(3030, () => console.log('Server is listening on http://localhost:3030...'))
