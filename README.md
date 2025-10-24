@@ -20,8 +20,8 @@
 - [x] Create auth controller
 - [x] Add json parser   
 - [x] Add registration end point
-- [] Add and config database
-- [] Add user model
+- [x] Add and config database
+- [x] Add user model
 - [] Add user service
 - [] Install bcrypt
 - [] Hash password on register
