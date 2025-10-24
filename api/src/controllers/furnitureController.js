@@ -10,6 +10,14 @@ furnitureController.get('/', async (req, res) => {
     res.json(furnitures ?? []);
 });
 
+furnitureController.get('/:furnitureId', async (req, res) => {
+    const furnitureId = req.params.furnitureId;
+
+    const furniture = await furnitureService.getOne(furnitureId);
+
+    res.json(furniture);
+});
+
 furnitureController.post('/', async (req, res) => {
     const furnitureData = req.body;
     
