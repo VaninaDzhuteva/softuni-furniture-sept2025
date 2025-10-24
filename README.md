@@ -47,6 +47,7 @@
 
 ## Error handling
 - [x] Create error util for message
+- [x] Global errorhandler
 
 ## Bonus
 - [ ] Build
