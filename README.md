@@ -39,6 +39,7 @@
 - [x] Get all furnitures
 - [x] Select only needed info for catalog
 - [x] Create details endpoint
+- [x] Add owner relation to furniture model
 
 ## Bonus
 - [ ] Build

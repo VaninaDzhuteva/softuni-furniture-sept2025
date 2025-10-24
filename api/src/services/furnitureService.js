@@ -1,8 +1,13 @@
 import Furniture from "../models/Furniture.js";
 
 export default {
-    create(furnitureData) {
-        return Furniture.create(furnitureData);
+    create(furnitureData, ownerId) {
+        console.log(ownerId);
+        
+        return Furniture.create({
+            ...furnitureData,
+            _ownerId: ownerId
+        });
     },
 
     getAll() {
