@@ -22,9 +22,12 @@
 - [x] Add registration end point
 - [x] Add and config database
 - [x] Add user model
-- [] Add user service
-- [] Install bcrypt
-- [] Hash password on register
+- [x] Add user service
+- [x] Install bcrypt
+- [x] Hash password on register
+- [x] Add login endpoint
+- [x] Verify login credentials
+- [ ] Generate and return token
 
 ## Bonus
 - [ ] Build

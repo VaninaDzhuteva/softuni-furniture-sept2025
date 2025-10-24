@@ -11,4 +11,8 @@ userController.post('/register', async (req, res) => {
     res.status(201).end();
 });
 
+userController.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+});
+
 export default userController;
