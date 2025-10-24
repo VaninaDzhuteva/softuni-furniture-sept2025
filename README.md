@@ -30,7 +30,12 @@
 - [x] Generate and return token `npm i jsonwebtoken`
 - [x] Auto login after registration
 - [x] Logout
-- [ ] Add auth middleware
+- [x] Add auth middleware
+
+## Furniture Endpoints
+- [ ] Add furniture model
+- [ ] Add furniture service
+- [ ] Create furniture endpoint
 
 ## Bonus
 - [ ] Build
