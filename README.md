@@ -43,6 +43,7 @@
 - [x] Edit furniture
 - [x] Delete furniture
 - [ ] Check if owner
+- [ ] Filter furniture by userId
 
 ## Bonus
 - [ ] Build
