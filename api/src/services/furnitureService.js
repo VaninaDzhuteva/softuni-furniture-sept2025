@@ -1,15 +1,6 @@
 import Furniture from "../models/Furniture.js";
 
 export default {
-    create(furnitureData, ownerId) {
-        console.log(ownerId);
-        
-        return Furniture.create({
-            ...furnitureData,
-            _ownerId: ownerId
-        });
-    },
-
     getAll() {
         return Furniture.find().select(
             {
@@ -22,5 +13,22 @@ export default {
 
     getOne(furnitureId) {
         return Furniture.findById(furnitureId);
+    },
+
+    create(furnitureData, ownerId) {
+        console.log(ownerId);
+        
+        return Furniture.create({
+            ...furnitureData,
+            _ownerId: ownerId
+        });
+    },
+
+    update(furnitureId, furnitureData) {
+        return Furniture.findByIdAndUpdate(furnitureId, furnitureData, { runValidators: true });
+    },
+
+    delete(furnitureId) {
+        return Furniture.findByIdAndDelete(furnitureId);
     }
 }
